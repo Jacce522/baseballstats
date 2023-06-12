@@ -11,6 +11,7 @@ using namespace std;
 void search(const string name)
 {
     string line = "";
+    int count=0;
     string header = "Rk,Name,Age,Tm,Lg,G,PA,AB,R,H,2B,3B,HR,RBI,SB,CS,BB,SO,BA,OBP,SLG,OPS,OPS+,TB,GDP,HBP,SH,SF,IBB,Pos Summary";
 
    
@@ -26,7 +27,7 @@ void search(const string name)
         if(found)
         {
            cout << line << "\n";
-            
+            ++count;
             
         }
        
@@ -35,7 +36,7 @@ void search(const string name)
 
 
         
-
+    cout << count << " cases found\n";
     cout <<"\n";
     MyReadFile.close();
 }
@@ -47,7 +48,7 @@ void search(const string name)
 int main()
 {
     string name ="";
-    cout << "Type in player to search for 2023 MLB Batting: \n";
+    cout << "Type in player or team to search for 2023 MLB Batting: \n";
     cin >> name;
     search(name);
    
